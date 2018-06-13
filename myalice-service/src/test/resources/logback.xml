@@ -1,0 +1,41 @@
+<?xml version="1.0"?>
+<configuration>
+    <appender name="console" class="ch.qos.logback.core.ConsoleAppender">
+        <encoder>
+            <pattern>[%-5level] %d{HH:mm:ss.SSS} [%thread] %logger{36} - %msg%n
+            </pattern>
+        </encoder>
+    </appender>
+	
+	<appender name="error"
+        class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>../logs/error.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>../logs/error-%d{yyyy-MM-dd}.log</fileNamePattern>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%msg%n</pattern>
+        </encoder>  
+    </appender>
+    
+    <appender name="info"
+        class="ch.qos.logback.core.rolling.RollingFileAppender">
+        <file>../logs/info.log</file>
+        <rollingPolicy class="ch.qos.logback.core.rolling.TimeBasedRollingPolicy">
+            <fileNamePattern>../logs/info-%d{yyyy-MM-dd}.log</fileNamePattern>
+        </rollingPolicy>
+        <encoder class="ch.qos.logback.classic.encoder.PatternLayoutEncoder">
+            <pattern>%msg%n</pattern>
+        </encoder>
+    </appender>
+    <!-- 定义的日志基本打印位置,可以定义 日志基本level，如果定义 就打印响应的日志基本，不定义就是所有-->
+    <logger name="myalice"  additivity="false">
+       <appender-ref ref="info" /> 
+        <appender-ref ref="console" />  
+    </logger>
+    <!-- 没有定义的日志名称，的打印日志的级别 -->
+    <root level="DEBUG">
+         <appender-ref ref="info" /> 
+        <appender-ref ref="console" /> 
+    </root>
+</configuration>

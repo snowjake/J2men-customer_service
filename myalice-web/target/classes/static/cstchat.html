@@ -1,0 +1,128 @@
+﻿<!Doctype HTML>
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1,maximum-scale=1, user-scalable=no"/>
+	<title>客服工作台</title>
+	<link href="/bootstrap-3.3.5-dist/css/bootstrap.min.css" title="" rel="stylesheet" />
+	<link title="" href="/css/style.css" rel="stylesheet" type="text/css"  />
+	<link title="blue" href="/css/dermadefault.css" rel="stylesheet" type="text/css"/>
+	<link title="green" href="/css/dermagreen.css" rel="stylesheet" type="text/css" disabled="disabled"/>
+	<link title="orange" href="/css/dermaorange.css" rel="stylesheet" type="text/css" disabled="disabled"/>
+	<link href="/css/templatecss.css" rel="stylesheet" title="" type="text/css" />
+	<script src="/script/jquery-1.11.1.min.js" type="text/javascript"></script>
+	<script src="/bootstrap-3.3.5-dist/js/bootstrap.min.js" type="text/javascript"></script>
+	<script src="/admin/js/jquery-ext.js"></script>
+	<script src="/admin/js/js.cookie.js"></script>
+	<script src="/admin/js/bootbox.min.js"></script>
+	<script src="/script/sockjs.min.js"></script>
+    <script  src="/script/stomp.min.js"></script>
+	<script src="/script/cschat.js" type="text/javascript"></script>
+	<style type="text/css">
+		.even .reply-content-box{float: right;}
+		.even .reply-content-box .reply-content{width:400px;}
+		.odd .reply-content-box .reply-content{width:400px;}
+	</style>
+</head>
+
+<body>
+  <div class="my-index right-full">
+      <ol class="breadcrumb">
+        <li class="active">在线客服</li>
+      </ol>
+     <div class="container-fluid panel-full">
+            <div style="background:#fff;padding: 0px;width:100%;height:95%;"> 
+              <div class="panel panel-default height-full"  style="margin-bottom: 0px;">
+                <div class="panel-body">
+                    <div style="position:absolute;top:8px;bottom:0px;width:68%;" >
+                            <div style="height:70%;overflow: auto;" id="nurse">
+                             <ul class="content-reply-box" id="online_content"> 
+                                  <li class="odd">
+                                      <a class="user"><img class="img-responsive avatar_" src="img/avatar-1.png" alt="">
+                                     	 <span class="user-name">系统管理员</span>
+                                      </a>
+                                      <div class="reply-content-box">
+                                        <span class="reply-time"></span>
+                                          <div class="reply-content pr">
+                                            <span class="arrow">&nbsp;</span>
+                                            	您好，欢迎光临。请问有什么可以帮到您？
+                                          </div>
+                                      </div>
+                                  </li>
+                              </ul>
+                            </div>
+                            <div style="height: 25%;margin-top: 2px;">
+                                <form >
+                                  <div class="form-group">
+                                    <textarea class="form-control" id="message" rows="5"></textarea>
+                                  </div>
+                                  <div class="form-group text-right">
+                                    <button type="button" class="btn btn-danger">结束</button>
+                                    <button type="button" class="btn btn-info" id="sendMessage">发送</button>
+                                  </div>
+                                </form>
+                            </div>
+                    </div>
+                    <div style="position: absolute;right:0px;top:56px;bottom:0px;width:30%;display:none;">
+                      <ul class="nav nav-tabs" role="tablist">
+                                <li role="presentation" class="active"><a href="#tab1" aria-controls="home" role="tab" data-toggle="tab">访客信息</a></li>
+                                <li role="presentation"><a href="#tab2" role="tab" data-toggle="tab">快捷回复</a></li>
+                                <li role="presentation"><a href="#tab3" role="tab" data-toggle="tab">来访信息</a></li>
+                      </ul>
+                      <div class="tab-content">
+                                <div role="tabpanel" class="tab-pane active" id="tab1">1</div>
+                                <div role="tabpanel" class="tab-pane" id="tab2">2</div>
+                                <div role="tabpanel" class="tab-pane" id="tab3">
+
+                                    <table class="table">
+                                      <tr>
+                                        <td>来访次数</td>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td>会话次数</td>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td>渠道</td>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td>IP</td>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td>当前浏览页</td>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td>来源</td>
+                                        <td></td>
+                                      </tr>
+                                      <tr>
+                                        <td>搜索关键字</td>
+                                        <td></td>
+                                      </tr>
+                                    </table>
+                           </div>
+                    </div>
+                </div>
+              </div>
+            </div>
+        </div>
+      </div>
+     </div>
+    <div id="odd_item" style="display:none;">
+    	<li class="{class}">
+          <a class="user" href="#"><img class="img-responsive avatar_" src="img/avatar-1.png" alt=""><span class="user-name">{name}</span></a>
+          <div class="reply-content-box">
+            <span class="reply-time">{date}</span>
+              <div class="reply-content pr">
+                <span class="arrow">&nbsp;</span>
+                	{content}
+              </div>
+          </div>
+       </li>
+    </div>
+</body>
+</html>

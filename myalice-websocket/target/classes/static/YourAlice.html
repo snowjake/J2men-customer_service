@@ -1,0 +1,76 @@
+<!DOCTYPE html>
+<html xmlns:wb="“http://open.weibo.com/wb”"><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    
+    
+    <meta name="keywords" content="MyCat，客服，智能机器人，MyAlice">
+    <meta name="description" content="MyCat智能客服机器人">
+    <meta name="robots" content="all">
+    <meta name="author" content="Radar">
+    <title>Alice智能机器人 - MyCat</title>
+    <link rel="shortcut icon" href="/images/websocket/favicon.ico">
+    <link rel="bookmark" href="/images/websocket/favicon.ico">
+    <link type="text/css" rel="stylesheet" href="./css/websocket/ued.alice.embed-min.css">
+</head>
+<!--全屏请在body标签上加class：jimi_revision-->
+
+<body id="embed" class="alice_revision">
+<div id="page-loading" class="page-loading" style="display: none;"></div>
+<div id="container" class="wrap jshop alice-home" style="left: 0px; right: 0px; visibility: visible; height: 589px;">
+  <!--蓝色背景头部-->
+  <div class="header" onselectstart="return false">
+    <!--<div class="logo fixPng"><img src="//static.360buyimg.com/jimi/img/top_img.png" width="535" height="88" /></div>-->
+    <h1>Alice智能机器人</h1>
+  </div>
+  <!--内容区域-->
+  <div class="container clearfix">
+    <!--左侧聊天区域-->
+    <div class="l-area fl">
+      <div class="l-area-content">
+        <!--全屏时请计算chat-block的高度height=屏幕高度-184px-->
+        		<div class="nano has-scrollbar">
+          <div id="master"></div>
+          <div id="chatcontent" class="content chat-block" tabindex="0" style="height: 445px;"><div class="jimi_lists clearfix"><div class="jimi-name">JIMI 10:20:58</div><div class="header_img jimi1 fl"></div><table class="msg" cellspacing="0" cellpadding="0"><tbody><tr><td class="lt"></td><td class="tt"></td><td class="rt"></td></tr><tr><td class="lm"><span></span></td><td class="mm"><span>24小时随时为您服务!</span></td><td class="rm"></td></tr><tr><td class="lb"></td><td class="bm"></td><td class="rb"></td></tr><tr><td></td></tr></tbody></table></div></div>
+          <div id="pop-alert"></div>
+        <div class="fast-entry"><a href="javascript:;" id="f-e-btn" class="f-e-btn on"></a><div class="f-e-lis"><a class="f-link-a" data-id="42" target="_blank" data-position="1" href="https://myjd.jd.com/afs/indexNew.action?entry=8">京东售后</a><a class="f-link-a" data-id="145" target="_blank" data-position="2" href="https://sitepp-fm.jd.com/">价格保护</a><a class="f-link-a" data-id="146" target="_blank" data-position="3" href="https://myjd-crm.jd.com/referee/orderlist.action">交易纠纷</a><a class="f-link-a" data-id="147" target="_blank" data-position="4" href="https://vip.jd.com/">京东会员</a><a class="f-link-a" data-id="148" target="_blank" data-position="5" href="https://club.jd.com/myJdcomments/myJdcomment.action">评价晒单</a></div></div><div class="pane" style="height: 100%; display: none; opacity: 1; visibility: visible;"><div class="slider" style="height: 472px;"></div></div></div>
+      </div>
+    </div>
+  </div>
+  <div class="edit-block">
+    <div id="sugguestions" class="suggestion-area" style="display: none;"></div>
+    <textarea id="text-in" name="text-in" class="text-type grayInput" autocomplete="off" style="width: 1350px; color: rgb(153, 153, 153);">有JIMI，没问题，您也可以尝试输入商品链接，提问相关问题。</textarea>
+    <i id="winsend" class="send">发送</i>
+  </div>
+</div>
+
+<div id="districtarea-msg" style="display:none;"></div>
+
+<script charset="utf-8" src="./JIMI智能机器人 - 京东_files/ced.loader.js.下载"></script>
+
+<script type="text/javascript">
+  CED_Loader.addJs("ued.framework-min.js");
+  CED_Loader.addJs("ued.plugin-min.js");
+</script><script src="./JIMI智能机器人 - 京东_files/ued.framework-min.js.下载" charset="utf-8" type="text/javascript" itemid="ued.framework-min.js"></script><script src="./JIMI智能机器人 - 京东_files/ued.plugin-min.js.下载" charset="utf-8" type="text/javascript" itemid="ued.plugin-min.js"></script>
+<script type="text/javascript">
+  //帮助中心
+  CED_Loader.addJs("ued.jimi.jshop-min.js");
+</script><script src="./JIMI智能机器人 - 京东_files/ued.jimi.jshop-min.js.下载" charset="utf-8" type="text/javascript" itemid="ued.jimi.jshop-min.js"></script>
+<script type="text/javascript">
+  CED_Loader.addJs("ued.jimi.index-min.js");
+</script><script src="./JIMI智能机器人 - 京东_files/ued.jimi.index-min.js.下载" charset="utf-8" type="text/javascript" itemid="ued.jimi.index-min.js"></script>
+<script type="text/javascript" src="./JIMI智能机器人 - 京东_files/base.js.下载"></script>
+<script type="text/javascript" src="./JIMI智能机器人 - 京东_files/libPath.js.下载"></script>
+
+
+<!--[if IE 6]>  
+<script type="text/javascript" src="//misc.360buyimg.com/lib/js/2013/DD_belatedPNG.js"></script>
+<script type="text/javascript">
+(function(){
+DD_belatedPNG.fix(".fixPng, div, ul, img, li, input, p, td , a, a:hover");
+})();
+</script>
+<![endif]-->
+
+
+
+<div id="lightboxOverlay" class="lightboxOverlay" style="display: none;"></div><div id="lightbox" class="lightbox" style="display: none;"><div class="lb-outerContainer"><div class="lb-closeContainer"><a class="lb-close"></a></div><div class="lb-container"><img class="lb-image" src="http://jimi1.jd.com/index.action?source=jdhome"><div class="lb-nav"><a class="lb-prev" href="http://jimi1.jd.com/index.action?source=jdhome"></a><a class="lb-next" href="http://jimi1.jd.com/index.action?source=jdhome"></a></div><div class="lb-loader"><a class="lb-cancel"></a></div></div></div><div class="lb-dataContainer"><div class="lb-data"><div class="lb-details"><span class="lb-caption"></span><span class="lb-number"></span></div></div></div></div><div id="district-consult" style="display: none;"></div></body></html>

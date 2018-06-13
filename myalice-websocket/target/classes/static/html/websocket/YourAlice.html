@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html><head><meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="keywords" content="MyCat，客服，智能机器人，MyAlice">
+    <meta name="description" content="MyCat智能客服机器人">
+    <meta name="robots" content="all">
+    <title>Alice智能机器人 - MyCat</title>
+    <link rel="shortcut icon" href="/images/websocket/favicon.ico">
+    <link rel="bookmark" href="/images/websocket/favicon.ico">
+    <link type="text/css" rel="stylesheet" href="/css/websocket/ued.alice.embed-min.css">
+    <script src="/webjars/jquery/jquery.min.js"></script>
+    <script src="/webjars/sockjs-client/sockjs.js"></script>
+    <script charset="utf-8" src="/js/websocket/util.js"></script>
+    <script charset="utf-8" src="/js/websocket/customer.js"></script>
+</head>
+<body id="embed" class="alice_revision">
+<div id="page-loading" class="page-loading" style="display: none;"></div>
+<div id="container" class="wrap jshop alice-home" style="left: 0px; right: 0px; visibility: visible; height: 589px;">
+    <!--蓝色背景头部-->
+    <div class="header" onselectstart="return false">
+        <h1>Alice智能机器人</h1>
+    </div>
+    <!--内容区域-->
+    <div class="container clearfix">
+        <!--左侧聊天区域-->
+        <div class="l-area fl">
+            <div class="l-area-content">
+                <!--全屏时请计算chat-block的高度height=屏幕高度-184px-->
+                <div class="nano has-scrollbar">
+                    <div id="master"></div>
+                    <div id="chatcontent" class="content chat-block" tabindex="0" style="height: 445px;">
+
+                    </div>
+                    <div id="pop-alert">
+                        <div id="howToSendImgContent" class="im-pop-rule" style="display: none;">
+                            <div class="sub" style="float: right">
+                                <div class="close"><a href="javascript:;"></a>
+                                </div><p>将您已截好的图片直接粘贴至输入框中,或拖拽图片文件到浏览器中即可。</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="fast-entry">
+                        <a href="javascript:;" id="f-e-btn" class="f-e-btn on"></a>
+                        <div class="f-e-lis">
+                            <a id="howToSendImg" class="f-link-a" data-id="148" target="_blank" data-position="5" href="javascript:;">怎么发截图？</a>
+                        </div>
+                    </div>
+                    <div class="pane" style="height: 100%; display: none; opacity: 1; visibility: visible;"><div class="slider" style="height: 472px;"></div></div></div>
+            </div>
+        </div>
+    </div>
+    <div class="edit-block">
+        <div id="sugguestions" class="suggestion-area" style="display: none;"></div>
+        <textarea id="text-in" name="text-in" class="text-type grayInput" autocomplete="off" style="width: 1350px; color: rgb(153, 153, 153);"></textarea>
+        <i id="winsend" class="send">发送</i>
+    </div>
+</div>
+</body>
+</html>

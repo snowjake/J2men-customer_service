@@ -1,0 +1,133 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=UTF-8">
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge, chrome=1">
+    <title>在线客服</title>
+    <link rel="stylesheet" type="text/css" href="/css/websocket/skin-min.css">
+    <script type="text/javascript">window.jdpts={};jdpts._st=new Date().getTime();</script>
+    <script type="text/javascript" src="/js/websocket/joya.js"></script>
+    <script type="text/javascript" src="/webjars/jquery/jquery.min.js"></script>
+    <script type="text/javascript" src="/webjars/sockjs-client/sockjs.js"></script>
+    <script type="text/javascript" src="/js/websocket/util.js"></script>
+</head>
+<body>
+<div class="wrapper">
+    <div class="im-content" style="margin-left: -600px; width: 1200px;">
+        <div class="im-main-content">
+            <div class="im-left-sidebar">
+                <div class="user-info">
+                    <div class="info-lcol">
+                        <div class="u-pic">
+                            <img alt="用户头像" width="52" height="52" src="/img/websocket/default_supporter.png">
+                        </div>
+                        <div class="info-m">
+                            <div class="u-name">Alice</div>
+                        </div>
+                    </div>
+                </div>
+                <div class="u-wrap" id="listDetails">
+                    <ul class="u-lst">
+                    </ul>
+                </div>
+            </div>
+            <div class="im-middle" id="im-middle" conver="">
+                <div class="im-header im-chat-t"></div>
+                <div class="im-chat-window" style="margin-right: 340px;">
+                    <!-- -- scrollDiv 消息渲染区域 -- -->
+                    <div class="im-chat-list" id="scrollDiv">
+                        <div class="chat-more" id="clickMore">
+                            <p class=""><span class="icon"></span><span class="txt">点击加载更多</span></p>
+                        </div>
+                    </div>
+                    <div class="im-edit-area">
+                        <div class="im-edit-toolbar">
+                            <p class="im-icon-out">
+                                <a id="howToSendImg" clstag="pageclick|keycount|w_web_201701061|24" href="javascript:;" class="rule" id="ruleBtn"> <i class="im-rule"></i> <span class="im-txt">怎么发截图？</span></a>
+                                <!--<a clstag="pageclick|keycount|w_web_201701061|5" href="javascript:;" class="star" id="degreeButton"> <i class="im-star"></i> <span class="im-txt">满意度评价</span> </a>-->
+                            </p>
+
+                            <div id="howToSendImgContent" class="im-pop-rule" style="display: none;">
+                                <div class="sub">
+                                    <div class="close"><a href="javascript:;"></a>
+                                    </div><p>将您已截好的图片直接粘贴至输入框中,或拖拽图片文件到浏览器中即可。</p>
+                                </div>
+                            </div>
+
+                            <!--<div class="im-pop-star" id="eval_rat" style="display: none;">
+                                <div class="t">
+                                    <div class="close">
+                                        <a href="javascript:;"></a>
+                                    </div>
+                                </div>
+                                <div class="m">
+                                    <div class="rat_box" id="rat_1493126406880">
+                                        <p class="title"><span class="text">请对此次服务进行评价</span></p>
+                                        <div class="starInfo" style="cursor: pointer; width: 195px;">
+                                            <img src="http://localhost:9876/alice/img/websocket/star_on_lg.png" alt="1" title="0">&nbsp;
+                                            <img src="http://localhost:9876/alice/img/websocket/star_on_lg.png" alt="2" title="25">&nbsp;
+                                            <img src="http://localhost:9876/alice/img/websocket/star_on_lg.png" alt="3" title="50">&nbsp;
+                                            <img src="http://localhost:9876/alice/img/websocket/star_on_lg.png" alt="4" title="75">&nbsp;
+                                            <img src="http://localhost:9876/alice/img/websocket/star_on_lg.png" alt="5" title="100">
+                                            <input type="hidden" name="score" value="5">
+                                        </div>
+                                        <div class="rat_ohter">
+                                            <div class="starResult" style="display: block;">非常满意</div>
+                                            <div class="degreelt50" style="display: none;"><p>您不满意的原因是</p>
+                                                <ul class="inner">
+                                                    <li data-rel="7">回复不及时</li>
+                                                    <li data-rel="11">服务态度差</li>
+                                                    <li data-rel="13">客服对业务不熟悉</li>
+                                                </ul>
+                                                <input type="hidden" name="reasonItem" value="0">
+                                            </div>
+                                            <div class="user_say" style="display: none;">
+                                                <textarea class="degreeText" style="font-size:13px;" maxlength="360" placeholder="请您输入不满意的原因"></textarea>
+                                            </div>
+                                        </div>
+                                        <input type="hidden" name="scoreEnd" value="100">
+                                        <div class="rat_opt"><a class="btn" href="javascript:;">提交</a></div>
+                                    </div>
+                                </div>
+                                <div class="b"></div>
+                            </div>-->
+                        </div>
+
+                        <div class="im-edit-ipt-area">
+                            <div id="text_in" class="im-edit-ipt" style="overflow-y: auto; font-weight: normal; font-size: 12px; overflow-x: hidden; word-break: break-all; font-style: normal; outline: none;" contenteditable="true" hidefocus="true" tabindex="0"></div>
+                        </div>
+                        <!--  <div class="im-edit-btn-area im-edit-btn-no"> -->
+                        <div class="im-edit-btn-area">
+                            <div class="im-link-area"></div>
+                            <div class="im-btn-send-area" title="按Enter键发送,按Ctrl+Enter键换行">
+                                <a href="javascript:;" class="im-btn im-btn-send" id="sendMsg"> <span class="im-txt">发送</span> <span class="im-btn-l"></span> </a>
+                            </div>
+                            <div class="im-edit-tip" id="chat_count">
+                                可以输入<span class="im-word-num">360</span>字
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="im-right-sidebar" style="width: 339px;">
+                    <ul class="im-tab">
+                        <li clstag="pageclick|keycount|w_web_201701061|7" data-info="order" class="im-item current"><div class="im-item-content">常见问题</div></li>
+                    </ul>
+                    <div class="im-tab-contents">
+                        <div class="im-tab-content im-my-order im-show">
+                            <ul id="faq" class="im-list01 im-list03">
+                                
+                            </ul>
+                            <div class="comonMore"><p><span class="icon"></span><span class="txt">点击加载更多</span></p></div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<input type="hidden" value="radarzw" id="userName">
+<script type="text/javascript" src="/js/websocket/supporter.js"></script>
+</body>
+</html>
