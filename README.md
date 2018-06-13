@@ -1,5 +1,5 @@
 ## from：https://github.com/hpgary/MyAlice
-
+在原有的基础上做了修改 增加了swagger 修改兼容了es6.x以上版本（因为6.x不允许多种type创建）  后续继续增加功能
 ## PageHelper mybatis 分页插件
 ```
 依赖jar包：
