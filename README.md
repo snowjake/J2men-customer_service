@@ -1,5 +1,12 @@
 ## from：https://github.com/hpgary/MyAlice
 在原有的基础上做了修改 增加了swagger 修改兼容了es6.x以上版本（因为6.x不允许多种type创建）  后续继续增加功能
+
+更详细的使用过程：
+1.安装elasticsearch服务，安装es-ik插件，安装es-head插件,启动es，启动es-head
+2.安装mysql服务，启动mysql,执行.sql文件中的sql语句创建表和默认数据
+3.启动web工程里App.java springboot启动成功
+4.访问localhost:8080/index.html 用数据库中的用户名密码登陆  创建问题和答案，实现客服问答
+5.访问localhost:8080/swagger-ui.html 查看所有接口，直接调用接口测试
 ## PageHelper mybatis 分页插件
 ```
 依赖jar包：
