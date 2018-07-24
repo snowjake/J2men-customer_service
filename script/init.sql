@@ -285,6 +285,7 @@ CREATE TABLE `talk_record` (
   `reply` varchar(500) DEFAULT NULL COMMENT '回复内容',
   `replyType` tinyint(2) DEFAULT NULL COMMENT '1找到内容',
   `groupId` varchar(20) DEFAULT NULL COMMENT 'QQ群ID',
+  `questionId` varchar(10) DEFAULT NULL COMMENT '问题id',
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
   KEY `groupId` (`groupId`)
@@ -346,5 +347,5 @@ UNLOCK TABLES;
 -- Dump completed on 2017-05-26  2:50:15
 use mysql ;
 delete from user where host != '127.0.0.1' ; 
-update user set password=password('123456'),host='%' ; 
+update user set password=password('root'),host='%' ; 
 flush privileges ; 
