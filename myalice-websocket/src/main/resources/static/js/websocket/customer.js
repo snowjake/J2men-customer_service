@@ -18,7 +18,7 @@ var selfImageAppend2 = "</div><table class='msg' cellspacing='0' cellpadding='0'
 var selfImageAppend3 = "'></td><td class='rm'><span></span></td></tr><tr><td class='lb'></td><td class='bm'></td><td class='rb'></td></tr><tr><td></td><td class='time'></td><td></td></tr></tbody></table></div>";
 
 var otherImageAppend1 = "<div class='alice_lists clearfix'><div class='alice-name'>Alice ";
-var otherImageAppend2 = "</div><div class='header_img alice1 fl'></div><table class='msg' cellspacing='0' cellpadding='0'><tbody><tr><td class='lt'></td><td class='tt'></td><td class='rt'></td></tr><tr><td class='lm'><span></span></td><td class='mm'><span><img class='message-img' src='";
+var otherImageAppend2 = "</div><div class='header_img alice1 fl'></div><table class='msg' cellspacing='0' cellpadding='0'><tbody><tr><td class='lt'></td><td class='tt'></td><td class='rt'></td></tr><tr><td class='lm'><span></span></td><td class='mm'><span><img class='message-img' src='http://";
 var otherImageAppend3 = "'></span></td><td class='rm'></td></tr><tr><td class='lb'></td><td class='bm'></td><td class='rb'></td></tr><tr><td></td></tr></tbody></table></div>";
 
 //var selfImageAppend1 = "<div class='customer_lists clearfix'><div class='my-name'>我 ";

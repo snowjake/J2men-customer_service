@@ -22,8 +22,8 @@ var selfImageAppend3 = "'><img class='message-img' src='";
 var selfImageAppend4 = "'></a></div></td><td class='rm'></td></tr><tr><td class='lb'></td><td class='bm'></td><td class='rb'></td></tr></tbody></table></div></div></div>";
 
 var otherImageAppend1 = "<div class='chat-txt' data-rel='history'><div class='chat-area service'><p class='name'>";
-var otherImageAppend2 = "</p><div class='dialog'><i class='i_arr'></i><span class='e_tips'></span><table border='0' cellpadding='0' cellspacing='0'><tbody><tr><td class='lt'></td><td class='tt'></td><td class='rt'></td></tr><tr><td class='lm'></td><td class='mm'><div class='cont'><div><a rel='gallery' class='image-file' href='";
-var otherImageAppend3 = "'><img class='message-img' src='";
+var otherImageAppend2 = "</p><div class='dialog'><i class='i_arr'></i><span class='e_tips'></span><table border='0' cellpadding='0' cellspacing='0'><tbody><tr><td class='lt'></td><td class='tt'></td><td class='rt'></td></tr><tr><td class='lm'></td><td class='mm'><div class='cont'><div><a rel='gallery' class='image-file' href='http://";
+var otherImageAppend3 = "'><img class='message-img' src='http://";
 var otherImageAppend4 = "'></a></div></div></td><td class='rm'></td></tr><tr><td class='lb'></td><td class='bm'></td><td class='rb'></td></tr></tbody></table></div></div></div>";
 
 var faqAppend1 = "<li><p class='bg-1'><strong>问题：</strong><span class='s-3'><a target='_blank' href='";
