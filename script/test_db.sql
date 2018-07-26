@@ -207,13 +207,20 @@ CREATE TABLE `talk_record` (
   `id` varchar(36) NOT NULL COMMENT '主键',
   `content` varchar(500) NOT NULL COMMENT '提问内容',
   `user_id` varchar(36) DEFAULT NULL COMMENT '用户ID',
-  `user_type` char(255) NOT NULL COMMENT '用户类型（0：客户，1：客服）',
+  `user_type` char(255) NOT NULL DEFAULT '0' COMMENT '用户类型（0：客户，1：客服）',
   `create_time` datetime NOT NULL COMMENT '创建时间',
   `connection_id` varchar(36) NOT NULL COMMENT '连接ID',
   `reply` varchar(500) DEFAULT NULL COMMENT '回复内容',
   `replyType` tinyint(2) DEFAULT NULL COMMENT '1找到内容',
   `groupId` varchar(20) DEFAULT NULL COMMENT 'QQ群ID',
   `questionId` varchar(36) DEFAULT NULL COMMENT '问题ID',
+  `from_user_id` varchar(32) DEFAULT NULL COMMENT '用户ID',
+  `from_user_name` varchar(32) DEFAULT NULL COMMENT '用户名',
+  `from_ip` varchar(128) DEFAULT NULL,
+  `to_ip` varchar(128) DEFAULT NULL,
+  `to_user_id` varchar(36) DEFAULT NULL,
+  `to_user_name` varchar(36) DEFAULT NULL,
+  `type` char(255) NOT NULL COMMENT '用户类型（0：客户，1：客服， 2：客户图片，3：客服图片）',
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
   KEY `groupId` (`groupId`)
@@ -253,4 +260,4 @@ CREATE TABLE `users` (
 /*!40101 SET COLLATION_CONNECTION=@OLD_COLLATION_CONNECTION */;
 /*!40111 SET SQL_NOTES=@OLD_SQL_NOTES */;
 
--- Dump completed on 2018-07-26 14:40:57
+-- Dump completed on 2018-07-26 15:28:06
