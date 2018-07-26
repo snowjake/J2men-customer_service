@@ -220,7 +220,7 @@ CREATE TABLE `talk_record` (
   `to_ip` varchar(128) DEFAULT NULL,
   `to_user_id` varchar(36) DEFAULT NULL,
   `to_user_name` varchar(36) DEFAULT NULL,
-  `type` char(255) NOT NULL COMMENT '用户类型（0：客户，1：客服， 2：客户图片，3：客服图片）',
+  `type` char(255) NOT NULL DEFAULT '0' COMMENT '用户类型（0：客户，1：客服， 2：客户图片，3：客服图片）',
   PRIMARY KEY (`id`),
   KEY `user_id` (`user_id`),
   KEY `groupId` (`groupId`)
