@@ -24,7 +24,25 @@
 		.odd .reply-content-box .reply-content{width:400px;}
 	</style>
 </head>
-
+<script type="text/javascript">  
+document.onkeydown=function(e){
+    if(e.keyCode == 13 && e.ctrlKey){
+        // 这里实现换行
+        document.getElementById("message").value += "\n";
+    }else if(e.keyCode == 13){
+        // 避免回车键换行
+        e.preventDefault();
+        // 下面写你的发送消息的代码
+        var message = $.trim($("#message").val());  
+		if("" == message){
+			bootbox.alert("回复内容不能为空"); 
+			return ; 
+		}
+		sendSpittle(message);
+		$("#message").val("");
+    }
+}
+ </script>  
 <body>
   <div class="my-index right-full">
       <ol class="breadcrumb">
