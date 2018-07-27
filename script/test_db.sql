@@ -100,6 +100,19 @@ CREATE TABLE `faq` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8;
 /*!40101 SET character_set_client = @saved_cs_client */;
 
+-- ----------------------------
+-- Table structure for faq
+-- ----------------------------
+DROP TABLE IF EXISTS `faq`;
+CREATE TABLE `faq` (
+  `id` int(11) NOT NULL AUTO_INCREMENT,
+  `summary` varchar(255) DEFAULT NULL COMMENT '标题',
+  `url` varchar(255) DEFAULT NULL COMMENT '资源地址',
+  `status` char(255) DEFAULT NULL COMMENT '状态（0：正常，1：失效）',
+  `remarks` varchar(255) DEFAULT NULL COMMENT '备注',
+  PRIMARY KEY (`id`)
+) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
+
 --
 -- Table structure for table `persistent_logins`
 --
