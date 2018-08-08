@@ -1,4 +1,4 @@
-## from：https://github.com/hpgary/MyAlice
+
 在原有的基础上做了修改 增加了swagger 修改兼容了es6.x以上版本（因为6.x不允许多种type创建）  后续继续增加功能
 
 更详细的使用过程：
@@ -46,7 +46,7 @@ questionOrderMapper.query();
 startPage.getTotal() //获取记录条数
 startPage.getResult() //获取查询结果
 ```
-
+from：https://github.com/hpgary/MyAlice
 ## es 分词插件
 ```
 curl -XPUT 'http://127.0.0.1:19200/myalice?pretty' -d '{
